@@ -36,7 +36,7 @@ names(test_act_names) <- c("Code_activity","Label_activity")  #naming this table
 
 test_complete <- cbind(test_act_names, test) #merging the test table with the activity table labeled
 
-test_complete$type <- "test" #Creating the variable to definy this observation as test
+test_complete$type <- 1 #Creating the variable to definy this observation as test
 ```
 
 Making exactly the same procedure with train tables
@@ -51,7 +51,7 @@ train_act_names <- merge(train_act, act_names, by.x ="V1", by.y ="V1")
 names(train_act_names) <- c("Code_activity","Label_activity")
 
 train_complete <- cbind(train_act_names, train)
-train_complete$type <- "train"
+train_complete$type <- 2
 ```
 
 
