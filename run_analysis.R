@@ -12,7 +12,7 @@ names(test_act_names) <- c("Code_activity","Label_activity")
 
 test_complete <- cbind(test_act_names, test)
 
-test_complete$type <- "test"
+test_complete$type <- 1
 
 train <- read.table(".\\UCI HAR Dataset\\train\\X_train.txt")
 names(train) <- var_names$V2
@@ -22,7 +22,7 @@ train_act_names <- merge(train_act, act_names, by.x ="V1", by.y ="V1")
 names(train_act_names) <- c("Code_activity","Label_activity")
 
 train_complete <- cbind(train_act_names, train)
-train_complete$type <- "train"
+train_complete$type <- 2
 
 complete_data  <- rbind(test_complete,train_complete)
 
