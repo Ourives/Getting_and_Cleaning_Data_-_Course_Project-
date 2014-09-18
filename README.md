@@ -66,7 +66,7 @@ Extracting mean and standard of each measuremnt
 For that, a vector with the name of the variable of mean and standart deviation is created (with the qualitative variables, of course)
 
 ```r
-list_var <- as.vector(c("Code_activity","Label_activity","type",
+list_var <- as.vector(c("Code_activity","type",
                         "tBodyAcc-mean()-X",
                         "tBodyAcc-mean()-Y",
                         "tBodyAcc-mean()-Z",
@@ -164,7 +164,7 @@ tidy_data <- complete_data[,list_var]
 
 To finish the last topic (number 5), follow the mean of the tidy_data variables by activity and each subject
 ```r
-mean_tidy_data <- aggregate(. ~ type + Label_activity, data = tidy_data, FUN= "mean")
+mean_tidy_data <- aggregate(. ~ type + Code_activity, data = tidy_data, FUN= "mean")
 ```
 
 I hope you enjoy!
