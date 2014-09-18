@@ -18,7 +18,7 @@
 <ol>
 <li>Test</li>
 <li>Train</li>
-</li>
+</ol>
 
 ###tBodyAcc-mean()-X
 ####Mean of normalized value of body acceleration in X-Axis.
