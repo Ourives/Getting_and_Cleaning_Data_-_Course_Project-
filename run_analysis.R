@@ -26,7 +26,7 @@ train_complete$type <- "train"
 
 complete_data  <- rbind(test_complete,train_complete)
 
-list_var <- as.vector(c("Code_activity","Label_activity","type",
+list_var <- as.vector(c("Code_activity","type",
                         "tBodyAcc-mean()-X",
                         "tBodyAcc-mean()-Y",
                         "tBodyAcc-mean()-Z",
@@ -116,4 +116,4 @@ list_var <- as.vector(c("Code_activity","Label_activity","type",
 
 tidy_data <- complete_data[,list_var]
 
-mean_tidy_data <- aggregate(. ~ type + Label_activity, data = tidy_data, FUN= "mean")
+mean_tidy_data <- aggregate(. ~ type + Code_activity, data = tidy_data, FUN= "mean")
